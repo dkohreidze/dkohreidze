@@ -7,19 +7,26 @@
 
 // jQuery to cycle h1 text
 $(function() {
-    var text = ['grow revenue', 'retain users', 'optimize funnels'];
+    var text = ['grow revenue', 'retain users', 'optimize funnels', 'develop strategy'];
+    var loop = null;
     i = 0,
     $div = $('#keywords');
 
-    setInterval(function ()
-    {   
-        $div.fadeOut(function()
-        {
+    loop = setInterval(function() {   
+        $div.fadeOut(function() {
             $div.text(text[i++ % text.length]).fadeIn();
         });
-    }, 1700);
+    }, 1800);
+
+    window.setTimeout(function(){
+       clearInterval(loop);
+    }, 7000);
 });
 
+
+
+
+// validate form helper
 jQuery.validator.addMethod('answercheck', function (value, element) {
         return this.optional(element) || /^\bcat\b$/.test(value);
     }, "type the correct answer -_-");
