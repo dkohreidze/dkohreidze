@@ -4,8 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-
-// jQuery to cycle h1 text
+// cycle h1 text
 $(function() {
     var text = ['retain users', 'optimize funnels', 'develop strategy'];
     var loop = null;
@@ -23,105 +22,30 @@ $(function() {
     }, 7000);
 });
 
-// sets skill percentages
-$(document).ready(function() {
-  $('.adobe').css('width', '100%');
-  $('.html').css('width', '100%');
-  $('.css').css('width', '100%');
-  $('.lesssass').css('width', '50%');
-  $('.jquery').css('width', '70%');
-  $('.javascript').css('width', '55%');
-  $('.bootstrap').css('width', '90%');
-  $('.wordpress').css('width', '85%');
-  $('.ui').css('width', '100%');
-  $('.ux').css('width', '90%');
-  $('.rwd').css('width', '85%');
-  $('.mobile').css('width', '85%');
-  $('.rapidproto').css('width', '95%');
-});
-
-// iterates skill 
-$(document).ready(function() {
-   function count($this){
-        var current = parseInt($this.html(), 10);
-        $this.html(++current);
-        if(current !== $this.data('count')){
-            setTimeout(function(){count($this)}, 35);
-        }
-    }  
-    $("#number").each(function() {
-      $(this).data('count', parseInt($(this).html(), 10));
-      $(this).html('0');
-      count($(this));
-  });
-});
 
 
-
-
-// validate form helper
-jQuery.validator.addMethod('answercheck', function (value, element) {
-        return this.optional(element) || /^\bcat\b$/.test(value);
-    }, "type the correct answer -_-");
-
-// validate contact form
+// loads skill bars after user scrolls to section
 $(function() {
-    $('#contact').validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            message: {
-                required: true
-            },
-            answer: {
-                required: true,
-                answercheck: true
-            }
-        },
-        messages: {
-            name: {
-                required: "come on, you have a name don't you?",
-                minlength: "your name must consist of at least 2 characters"
-            },
-            email: {
-                required: "no email, no message"
-            },
-            message: {
-                required: "um...yea, you have to write something to send this form.",
-                minlength: "thats all? really?"
-            },
-            answer: {
-                required: "sorry, wrong answer!"
-            }
-        },
-        submitHandler: function(form) {
-            $(form).ajaxSubmit({
-                type:"POST",
-                data: $(form).serialize(),
-                url:"process.php",
-                success: function() {
-                    $('#contact :input').attr('disabled', 'disabled');
-                    $('#contact').fadeTo( "slow", 0.15, function() {
-                        $(this).find(':input').attr('disabled', 'disabled');
-                        $(this).find('label').css('cursor','default');
-                        $('#success').fadeIn();
-                    });
-                },
-                error: function() {
-                    $('#contact').fadeTo( "slow", 0.15, function() {
-                        $('#error').fadeIn();
-                    });
-                }
-            });
+    var oTop = $('#skills').offset().top - window.innerHeight + 300;
+    $(window).scroll(function(){
+        var pTop = $('body').scrollTop();
+        //console.log( pTop + ' - ' + oTop );   //just for your debugging
+        if( pTop > oTop ) {
+            console.log("Skills loaded.");
+            $('.skill1').css('width', '100%');
+            $('.skill2').css('width', '100%');
+            $('.skill3').css('width', '85%');
+            $('.skill4').css('width', '95%');
+            $('.skill5').css('width', '80%');
+            $('.skill6').css('width', '60%');
+            $('.skill7').css('width', '50%');
+            $('.skill8').css('width', '40%');
+            $('.skill9').css('width', '100%');
+            $('.skill10').css('width', '85%');
         }
     });
 });
+
 
 
 // jQuery to collapse the navbar on scroll
