@@ -7,7 +7,7 @@
 
 // jQuery to cycle h1 text
 $(function() {
-    var text = ['grow revenue', 'retain users', 'optimize funnels', 'develop strategy'];
+    var text = ['retain users', 'optimize funnels', 'develop strategy'];
     var loop = null;
     i = 0,
     $div = $('#keywords');
