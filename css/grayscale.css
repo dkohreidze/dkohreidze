@@ -449,7 +449,8 @@ fieldset {
 }
 
 
-#resumeProficiencies {
+
+#skills-container {
     
     display:block;
     position: relative;
@@ -457,7 +458,7 @@ fieldset {
     margin: 20px 0px 30px 30px;
 }
 
-#resumeProficienciesTop {
+#skill-label {
     float: left;
     clear: right;
     width: 100%;
@@ -466,12 +467,14 @@ fieldset {
     font-weight: 600;
 }
 
-#resumeProficienciesBottom {
+#skill-bar {
     float: left;
     clear: right;
     width: 50%;
     margin: 2px 0px 0px 0px;
 }
+
+       
 
 #number {
   color:white;

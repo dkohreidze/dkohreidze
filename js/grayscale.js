@@ -10,7 +10,7 @@ $(function() {
     var text = ['retain users', 'optimize funnels', 'develop strategy'];
     var loop = null;
     i = 0,
-    $div = $('#keywords');
+    $div = $('#header-cycle');
 
     loop = setInterval(function() {   
         $div.fadeOut(function() {
