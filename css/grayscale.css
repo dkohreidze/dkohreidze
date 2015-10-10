@@ -200,7 +200,7 @@ a:focus {
     transition: background .3s ease-in-out;
 }
 
-@media(min-width:768px) {
+@media(max-width:768px) {
     .btn-circle {
         margin-top: 75px !important;
     }
@@ -386,6 +386,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%
+}
+
+@media(max-width: 600px) {
+    #skills-container {
+        width: 66%;
+    }
 }
 
 #skill-label {
