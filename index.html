@@ -10,6 +10,8 @@
     <meta name="description" content="Personal site of David Kohreidze.">
     <meta name="robots" content="noindex">
 
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -120,67 +122,58 @@
                     <div id="skill-label">Email Marketing</div>
                     <div id="skill-bar">
                         <div class="progress">
-                    <div class="skill3 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                            <div class="skill3 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>   
 
                     <div id="skill-label">AdWords (PPC, Display, Retargeting)</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill4 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill4 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                         </div>
                     </div>
 
                     <div id="skill-label">Marketing Automation</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill5 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill5 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>
 
                     <div id="skill-label">Python</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill6 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill6 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>
 
                     <div id="skill-label">JavaScript</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill7 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill7 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>   
 
                     <div id="skill-label">jQuery</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill8 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill8 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>
 
                     <div id="skill-label">Google Analytics</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill9 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    </div>
-                    </div>
+                        <div class="progress">
+                            <div class="skill9 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>   
 
                     <div id="skill-label">MySQL</div>
                     <div id="skill-bar">
-                    <div class="progress">
-                    <div class="skill10 progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                    <span class="sr-only"></span>
+                        <div class="progress">
+                            <div class="skill10 progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
                     </div>
-                    </div>
-                    </div>
-
                 </div>
             </div>
         <div>
@@ -205,7 +198,14 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact me</h2>
                 <p>Feel free to email me with any business enquiries or to just say hello!</p>
-                <!-- from goes here -->
+                <div id="form-container">
+                    <form method="post" action="contactengine.php">
+                        <input type="text" name="name" id="name" placeholder="Name" />            
+                        <input type="text" name="email" id="email" placeholder="Email"  />
+                        <textarea name="message" id="message" placeholder="Message" ></textarea>
+                        <input type="submit" name="submit" value="submit" class="btn btn-lg" id="submit" />
+                    </form>
+                </div>
             </div>
         </div>
     </section>   
